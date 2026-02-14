@@ -4,7 +4,7 @@ filesystem := env("BUILD_FILESYSTEM", "ext4")
 default: build load ostree-rechunk
 
 build:
-    mkosi -B -f
+    mkosi -B
 
 load:
     #!/usr/bin/env bash
