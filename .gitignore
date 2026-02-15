@@ -11,3 +11,7 @@ mkosi.crt
 mkosi.version
 mkosi.rootpw
 .mkosi-private
+*.raw
+*.iso
+*.qcow2
+*.img

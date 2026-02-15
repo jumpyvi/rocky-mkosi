@@ -1,5 +1,5 @@
-image := env("IMAGE_NAME", "localhost/zirconium-mkosi:latest")
-filesystem := env("BUILD_FILESYSTEM", "ext4")
+image := env("IMAGE_NAME", "localhost/rocky-mkosi:latest")
+filesystem := env("BUILD_FILESYSTEM", "xfs")
 
 default: build load ostree-rechunk
 
@@ -28,6 +28,7 @@ bootc *ARGS:
         -it \
         -v /sys/fs/selinux:/sys/fs/selinux \
         -v /etc/containers:/etc/containers:Z \
+        -v /etc/selinux:/etc/selinux:ro \
         -v /var/lib/containers:/var/lib/containers:Z \
         -v /dev:/dev \
         -v "${BUILD_BASE_DIR:-.}:/data" \

@@ -1,0 +1,2 @@
+enable gnome-keyring-daemon.service
+enable gnome-keyring-daemon.socket
