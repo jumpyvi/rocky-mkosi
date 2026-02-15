@@ -69,17 +69,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-mkosi-${{ env.IMAGE_NAME }}
 
-      - name: Build and load image
+      - name: Build image
         id: build
-        env:
-          BUILD_FLAVOR: ${{ matrix.flavor }}
         run: |
           sudo $(which just) build
 
       - name: Load image
         id: load
-        env:
-          BUILD_FLAVOR: ${{ matrix.flavor }}
         run: |
           sudo $(which just) load
 
