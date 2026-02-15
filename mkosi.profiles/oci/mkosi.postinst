@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: LGPL-2.1-or-later
 set -xeuo pipefail
 
-mkdir -p "${BUILDROOT}/sysroot/ostree/repo"
-ostree init --repo="${BUILDROOT}/sysroot/ostree/repo" --mode=bare --verbose
-sed -i "s/bare/bare-split-xattrs/" "${BUILDROOT}/sysroot/ostree/repo/config"
+# mkdir -p "${BUILDROOT}/sysroot/ostree/repo"
+# ostree init --repo="${BUILDROOT}/sysroot/ostree/repo" --mode=bare --verbose
+# sed -i "s/bare/bare-split-xattrs/" "${BUILDROOT}/sysroot/ostree/repo/config"
 # ostree commit --no-xattrs --bootable --repo="${BUILDROOT}/sysroot/ostree"
